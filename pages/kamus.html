@@ -4,11 +4,14 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kamus Hukum - LexAI</title>
+<title>LexAI | Kamus Hukum</title>
 
 <link rel="stylesheet" href="../style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -16,50 +19,267 @@
 <body>
 
 
+<button id="topBtn">
+↑
+</button>
+
+
+
+
 <nav class="navbar">
 
+
 <div class="logo">
-⚖️ LexAI
+LexAI
 </div>
 
-<a href="../index.html">
-Home
-</a>
+
+
+<div class="menu-toggle" id="menuToggle">
+☰
+</div>
+
+
+
+<ul id="navMenu">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="chat.html">AI Chat</a></li>
+
+<li><a href="kamus.html">Kamus</a></li>
+
+<li><a href="materi.html">Materi</a></li>
+
+<li><a href="analisis.html">Analisis</a></li>
+
+<li><a href="referensi.html">Referensi</a></li>
+
+<li><a href="tentang.html">Tentang</a></li>
+
+<li><a href="kontak.html">Kontak</a></li>
+
+</ul>
+
+
+
+<button id="darkMode">
+Mode
+</button>
+
 
 </nav>
 
 
 
-<section class="chat-section">
+
+
+
+
+<section class="about container">
 
 
 <h1>
-📚 Kamus Istilah Hukum
+Kamus Istilah Hukum
 </h1>
 
 
 <p>
-Cari arti istilah hukum dengan mudah.
+
+Cari dan pahami istilah hukum dengan cepat melalui database LexAI.
+
 </p>
 
 
-<div class="chat-box">
 
+
+<div class="search-box">
+
+<span>
+⌕
+</span>
 
 <input 
 type="text"
-id="istilah"
-placeholder="Contoh: Wanprestasi">
-
-
-<button onclick="cariIstilah()">
-Cari
-</button>
-
-
-<div id="hasil">
+id="searchKamus"
+placeholder="Cari istilah hukum..."
+>
 
 </div>
+
+
+
+
+
+
+<div class="cards" id="kamusList">
+
+
+
+<div class="card istilah">
+
+
+<h3>
+Advokat
+</h3>
+
+
+<p>
+
+Orang yang memberikan jasa hukum kepada masyarakat baik di dalam maupun di luar pengadilan.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card istilah">
+
+
+<h3>
+Wanprestasi
+</h3>
+
+
+<p>
+
+Keadaan ketika seseorang tidak memenuhi kewajiban dalam suatu perjanjian.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card istilah">
+
+
+<h3>
+Perjanjian
+</h3>
+
+
+<p>
+
+Hubungan hukum antara dua pihak atau lebih yang menimbulkan hak dan kewajiban.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card istilah">
+
+
+<h3>
+Gugatan
+</h3>
+
+
+<p>
+
+Permohonan atau tuntutan yang diajukan kepada pengadilan untuk memperoleh keputusan hukum.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card istilah">
+
+
+<h3>
+Yurisprudensi
+</h3>
+
+
+<p>
+
+Putusan hakim terdahulu yang dapat menjadi pertimbangan dalam perkara lain.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card istilah">
+
+
+<h3>
+Delik
+</h3>
+
+
+<p>
+
+Perbuatan yang dilarang oleh hukum pidana dan dapat dikenai sanksi.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card istilah">
+
+
+<h3>
+Konstitusi
+</h3>
+
+
+<p>
+
+Hukum dasar yang menjadi landasan penyelenggaraan suatu negara.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card istilah">
+
+
+<h3>
+Hak Asasi Manusia
+</h3>
+
+
+<p>
+
+Hak dasar yang melekat pada setiap manusia dan wajib dihormati serta dilindungi.
+
+</p>
+
+
+</div>
+
 
 
 </div>
@@ -69,7 +289,64 @@ Cari
 
 
 
+
+
+
+<footer>
+
+<p>
+© 2026 LexAI | Kamus Hukum Digital
+</p>
+
+</footer>
+
+
+
 <script src="../script.js"></script>
+
+
+<script>
+
+
+const search=document.getElementById("searchKamus");
+
+const items=document.querySelectorAll(".istilah");
+
+
+
+search.addEventListener("keyup",()=>{
+
+
+let value=search.value.toLowerCase();
+
+
+
+items.forEach(item=>{
+
+
+let text=item.innerText.toLowerCase();
+
+
+
+if(text.includes(value)){
+
+item.style.display="block";
+
+}else{
+
+item.style.display="none";
+
+}
+
+
+});
+
+
+});
+
+
+</script>
+
 
 
 </body>
