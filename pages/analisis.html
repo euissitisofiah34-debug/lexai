@@ -4,11 +4,14 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Analisis Kasus - LexAI</title>
+<title>LexAI | Legal Case Analyzer</title>
 
 <link rel="stylesheet" href="../style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -16,60 +19,250 @@
 <body>
 
 
+<button id="topBtn">
+↑
+</button>
+
+
+
 <nav class="navbar">
 
+
 <div class="logo">
-⚖️ LexAI
+LexAI
 </div>
 
 
-<a href="../index.html">
-Home
-</a>
+
+<div class="menu-toggle" id="menuToggle">
+☰
+</div>
+
+
+
+<ul id="navMenu">
+
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="chat.html">AI Chat</a></li>
+
+<li><a href="kamus.html">Kamus</a></li>
+
+<li><a href="materi.html">Materi</a></li>
+
+<li><a href="analisis.html">Analisis</a></li>
+
+<li><a href="referensi.html">Referensi</a></li>
+
+<li><a href="tentang.html">Tentang</a></li>
+
+<li><a href="kontak.html">Kontak</a></li>
+
+
+</ul>
+
+
+
+<button id="darkMode">
+Mode
+</button>
 
 
 </nav>
 
 
 
-<section class="chat-section">
+
+
+
+
+
+<section class="knowledge container">
+
+
+<div class="workspace-header">
 
 
 <h1>
-⚖️ Analisis Kasus Hukum
+Legal Case Analyzer
 </h1>
 
 
 <p>
-Masukkan kronologi kasus untuk mendapatkan analisis sederhana.
+
+Analisis awal permasalahan hukum berdasarkan kronologi yang diberikan.
+
 </p>
 
 
-
-<div class="chat-box">
-
-
-<textarea 
-id="kasus"
-placeholder="Tuliskan kronologi kasus di sini..."
-rows="8">
-</textarea>
+</div>
 
 
-<button onclick="analisisKasus()">
-Analisis
+
+
+
+
+
+<div class="analyzer-box">
+
+
+
+<label>
+Bidang Hukum
+</label>
+
+
+
+<div class="ai-search-box">
+
+<select id="lawCategory">
+
+<option>
+Hukum Pidana
+</option>
+
+<option>
+Hukum Perdata
+</option>
+
+<option>
+Hukum Keluarga
+</option>
+
+<option>
+Hukum Tata Negara
+</option>
+
+</select>
+
+</div>
+
+<option>
+Hukum Pidana
+</option>
+
+<option>
+Hukum Perdata
+</option>
+
+<option>
+Hukum Keluarga
+</option>
+
+<option>
+Hukum Tata Negara
+</option>
+
+</select>
+
+
+
+
+
+
+<label>
+Kronologi Kasus
+</label>
+
+
+
+<div class="ai-search-box textarea-box">
+
+<textarea
+
+id="caseInput"
+
+rows="6"
+
+placeholder="Masukkan kronologi kasus hukum..."
+
+></textarea>
+
+</div>
+
+
+
+
+
+
+<button 
+class="btn"
+onclick="analyzeCase()">
+
+Analisis Kasus
+
 </button>
 
 
-<div id="hasilKasus">
 
 </div>
 
 
+
+
+
+
+
+
+<div class="result-box">
+
+
+<h3>
+Hasil Analisis LexAI
+</h3>
+
+
+<p id="analysisResult">
+
+Belum ada analisis. Masukkan kasus terlebih dahulu.
+
+</p>
+
+
 </div>
+
+
 
 
 </section>
+
+
+
+
+
+
+
+
+<section class="disclaimer">
+
+
+<p>
+
+Hasil analisis LexAI bersifat informasi awal untuk pembelajaran akademik dan bukan pengganti pendapat hukum profesional.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<p>
+
+© 2026 LexAI | Legal Case Analyzer
+
+</p>
+
+</footer>
+
+
+
 
 
 
