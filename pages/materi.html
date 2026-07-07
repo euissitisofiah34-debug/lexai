@@ -4,11 +4,14 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Materi Hukum - LexAI</title>
+<title>LexAI | Legal Knowledge Library</title>
 
 <link rel="stylesheet" href="../style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -16,121 +19,338 @@
 <body>
 
 
+<button id="topBtn">
+↑
+</button>
+
+
+
+
 <nav class="navbar">
 
+
 <div class="logo">
-⚖️ LexAI
+LexAI
 </div>
 
 
-<a href="../index.html">
-Home
-</a>
+
+<div class="menu-toggle" id="menuToggle">
+☰
+</div>
+
+
+
+<ul id="navMenu">
+
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="chat.html">AI Chat</a></li>
+
+<li><a href="kamus.html">Kamus</a></li>
+
+<li><a href="materi.html">Materi</a></li>
+
+<li><a href="analisis.html">Analisis</a></li>
+
+<li><a href="referensi.html">Referensi</a></li>
+
+<li><a href="tentang.html">Tentang</a></li>
+
+<li><a href="kontak.html">Kontak</a></li>
+
+
+</ul>
+
+
+
+<button id="darkMode">
+Mode
+</button>
 
 
 </nav>
 
 
 
-<section class="chat-section">
+
+
+
+
+<section class="knowledge container">
+
+
+<div class="workspace-header">
 
 
 <h1>
-📚 Ringkasan Materi Hukum
+Legal Knowledge Library
 </h1>
 
 
 <p>
-Pelajari konsep dasar berbagai bidang hukum.
+
+Eksplorasi materi hukum secara terstruktur berdasarkan bidang ilmu hukum.
+
 </p>
 
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>
-⚖️ Hukum Pidana
-</h3>
-
-<p>
-Mempelajari perbuatan yang dilarang oleh hukum,
-unsur tindak pidana, pertanggungjawaban pidana,
-dan sanksi hukum.
-</p>
 
 </div>
 
 
 
-<div class="card">
 
-<h3>
-📜 Hukum Perdata
-</h3>
 
-<p>
-Mengatur hubungan hukum antar individu,
-seperti perjanjian, wanprestasi,
-dan perbuatan melawan hukum.
-</p>
+<div class="ai-search-box">
+
+
+<input
+
+type="text"
+
+id="searchMateri"
+
+placeholder="Cari materi hukum..."
+
+>
+
 
 </div>
 
 
 
-<div class="card">
+
+
+
+
+<div class="cards" id="materiList">
+
+
+
+<div class="card materi-item">
+
+
+<span class="category">
+Pidana
+</span>
+
 
 <h3>
-🏛️ Hukum Tata Negara
+Hukum Pidana
 </h3>
 
+
 <p>
-Membahas struktur negara,
-konstitusi, lembaga negara,
-dan sistem pemerintahan.
+
+Mempelajari tindak pidana, unsur delik, pertanggungjawaban pidana, dan sanksi hukum.
+
 </p>
+
 
 </div>
 
 
 
-<div class="card">
+
+
+<div class="card materi-item">
+
+
+<span class="category">
+Perdata
+</span>
+
 
 <h3>
-🏢 Hukum Administrasi Negara
+Hukum Perdata
 </h3>
 
+
 <p>
-Mengatur hubungan pemerintah
-dengan masyarakat dalam penyelenggaraan negara.
+
+Membahas hubungan hukum antarindividu seperti perjanjian, wanprestasi, dan ganti rugi.
+
 </p>
+
 
 </div>
 
 
 
-<div class="card">
+
+
+<div class="card materi-item">
+
+
+<span class="category">
+Tata Negara
+</span>
+
 
 <h3>
-☪️ Hukum Islam
+Hukum Tata Negara
 </h3>
 
+
 <p>
-Mempelajari aturan hukum berdasarkan
-prinsip syariat Islam.
+
+Mempelajari konstitusi, lembaga negara, dan sistem pemerintahan.
+
 </p>
+
 
 </div>
 
+
+
+
+
+<div class="card materi-item">
+
+
+<span class="category">
+Administrasi
+</span>
+
+
+<h3>
+Hukum Administrasi Negara
+</h3>
+
+
+<p>
+
+Mengkaji hubungan pemerintah dan masyarakat dalam penyelenggaraan administrasi negara.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card materi-item">
+
+
+<span class="category">
+Internasional
+</span>
+
+
+<h3>
+Hukum Internasional
+</h3>
+
+
+<p>
+
+Membahas hubungan hukum antarnegara dan aturan internasional.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card materi-item">
+
+
+<span class="category">
+Islam
+</span>
+
+
+<h3>
+Hukum Islam
+</h3>
+
+
+<p>
+
+Mempelajari prinsip hukum berdasarkan sumber hukum Islam.
+
+</p>
+
+
+</div>
 
 
 </div>
 
 
 </section>
+
+
+
+
+
+
+<footer>
+
+<p>
+
+© 2026 LexAI | Legal Knowledge Library
+
+</p>
+
+</footer>
+
+
+
+
+<script src="../script.js"></script>
+
+
+<script>
+
+
+const searchMateri=document.getElementById("searchMateri");
+
+const materi=document.querySelectorAll(".materi-item");
+
+
+
+searchMateri.addEventListener("keyup",()=>{
+
+
+let value=searchMateri.value.toLowerCase();
+
+
+
+materi.forEach(item=>{
+
+
+let text=item.innerText.toLowerCase();
+
+
+
+item.style.display=
+
+text.includes(value)
+
+?
+
+"block"
+
+:
+
+"none";
+
+
+});
+
+
+});
+
+
+</script>
+
 
 
 </body>
