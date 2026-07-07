@@ -1,87 +1,162 @@
-<!<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="id">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LexAI - Asisten Riset Hukum AI</title>
+<title>LexAI | Intelligent Legal Research Assistant</title>
 
 <link rel="stylesheet" href="style.css">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
-<button id="topBtn">
-↑
-</button>
 
-<script src="script.js"></script>
+<body>
 
-</body>
 
 <div class="loader">
     <div class="loading-text">
-        ⚖️ LexAI
+        LexAI
     </div>
 </div>
 
-<!-- Navbar -->
+
+
+<button id="topBtn">
+    ↑
+</button>
+
+
+
+
 
 <nav class="navbar">
 
+
 <div class="logo">
-⚖️ LexAI
+    LexAI
 </div>
 
 
-<ul>
 
-<li><a href="#">Home</a></li>
+<div class="menu-toggle" id="menuToggle">
+    ☰
+</div>
 
-<li><a href="pages/chat.html">AI Chat</a></li>
 
-<li><a href="pages/materi.html">Materi</a></li>
 
-<li><a href="pages/kamus.html">Kamus</a></li>
+<ul id="navMenu">
 
-<li><a href="pages/analisis.html">Analisis</a></li>
+<li>
+<a href="index.html">Home</a>
+</li>
 
-<li><a href="pages/referensi.html">Referensi</a></li>
+<li>
+<a href="pages/chat.html">AI Chat</a>
+</li>
 
-<li><a href="pages/tentang.html">Tentang</a></li>
+<li>
+<a href="pages/kamus.html">Kamus</a>
+</li>
 
-<li><a href="pages/kontak.html">Kontak</a></li>
+<li>
+<a href="pages/materi.html">Materi</a>
+</li>
+
+<li>
+<a href="pages/analisis.html">Analisis</a>
+</li>
+
+<li>
+<a href="pages/referensi.html">Referensi</a>
+</li>
+
+<li>
+<a href="pages/tentang.html">Tentang</a>
+</li>
+
+<li>
+<a href="pages/kontak.html">Kontak</a>
+</li>
 
 </ul>
+
+
+
+<a href="pages/chat.html" class="nav-btn">
+Mulai Riset
+</a>
+
+
+
 <button id="darkMode">
-🌙
+Mode
 </button>
+
 
 </nav>
 
 
 
-<!-- Hero Section -->
+
+
 
 
 <section class="hero">
 
 
+<div class="container hero-content">
+
+
+<span class="badge">
+AI LEGAL TECHNOLOGY
+</span>
+
+
+
 <h1>
-Asisten Riset Hukum Berbasis AI
+
+LexAI
+
+<br>
+
+Intelligent Legal Research Assistant
+
 </h1>
 
 
+
 <p>
-Membantu mahasiswa hukum memahami materi,
-menganalisis kasus, dan melakukan riset hukum
-dengan teknologi Artificial Intelligence.
+
+Platform berbasis Artificial Intelligence yang membantu mahasiswa hukum memahami materi, menganalisis kasus, mencari istilah hukum, dan menyusun referensi akademik secara lebih efektif.
+
 </p>
 
 
-<button>
-Mulai Konsultasi
-</button>
+
+<div class="hero-buttons">
+
+
+<a href="pages/chat.html" class="btn">
+Mulai Riset
+</a>
+
+
+
+<a href="#fitur" class="btn secondary">
+Lihat Fitur
+</a>
+
+
+</div>
+
+
+</div>
 
 
 </section>
@@ -89,71 +164,396 @@ Mulai Konsultasi
 
 
 
-<!-- Fitur -->
 
 
-<section class="fitur">
+
+<section class="stats container">
+
+
+<div class="stat-card">
 
 <h2>
-Fitur LexAI
+100+
 </h2>
+
+<p>
+Istilah Hukum
+</p>
+
+</div>
+
+
+
+
+<div class="stat-card">
+
+<h2>
+6
+</h2>
+
+<p>
+Bidang Hukum
+</p>
+
+</div>
+
+
+
+
+<div class="stat-card">
+
+<h2>
+7
+</h2>
+
+<p>
+Fitur AI
+</p>
+
+</div>
+
+
+
+
+<div class="stat-card">
+
+<h2>
+24/7
+</h2>
+
+<p>
+Learning Support
+</p>
+
+</div>
+
+
+</section>
+
+
+<section class="fitur container" id="fitur">
+
+
+<h1>
+Fitur Unggulan
+</h1>
+
+
+<p>
+Teknologi digital untuk mendukung pembelajaran dan penelitian hukum.
+</p>
+
 
 
 <div class="cards">
 
 
-<div class="card">
-<h3>🤖 AI Legal Assistant</h3>
+<div class="card feature-card">
+
+<div class="feature-icon">
+AI
+</div>
+
+<h3>
+AI Legal Assistant
+</h3>
+
 <p>
-Tanya jawab hukum menggunakan AI.
+Membantu menjawab pertanyaan dan memahami konsep hukum.
 </p>
+
 </div>
 
 
 
-<div class="card">
-<h3>📚 Materi Hukum</h3>
+<div class="card feature-card">
+
+<div class="feature-icon">
+⌕
+</div>
+
+<h3>
+Kamus Hukum Digital
+</h3>
+
 <p>
-Ringkasan materi hukum secara cepat.
+Mencari dan memahami istilah hukum secara cepat.
 </p>
+
 </div>
 
 
 
-<div class="card">
-<h3>⚖️ Analisis Kasus</h3>
+<div class="feature-icon">
+⚖
+</div>
+
+<h3>
+Analisis Kasus Hukum
+</h3>
+
 <p>
-Membantu memahami permasalahan hukum.
+Memberikan analisis awal berdasarkan kronologi permasalahan hukum.
 </p>
+
 </div>
 
 
 
-<div class="card">
-<h3>📄 Referensi</h3>
+<div class="feature-icon">
+▣
+</div>
+
+<h3>
+Materi Hukum
+</h3>
+
 <p>
-Membuat referensi akademik.
+Menyediakan ringkasan berbagai bidang ilmu hukum secara terstruktur.
 </p>
+
+</div>
+
+
+
+<div class="feature-icon">
+✦
+</div>
+
+<h3>
+Generator Referensi
+</h3>
+
+<p>
+Membantu membuat format referensi akademik untuk penelitian.
+</p>
+
 </div>
 
 
-
 </div>
+
 
 </section>
 
 
 
-<footer>
+
+
+
+
+<section class="workflow container">
+
+
+<h1>
+Cara Kerja LexAI
+</h1>
+
+
+
+
+<div class="steps">
+
+
+<div class="step-card">
+
+
+<span>
+01
+</span>
+
+
+<h3>
+Input Data
+</h3>
+
 
 <p>
-© 2026 LexAI | Project AI Hukum
+Masukkan pertanyaan, istilah, atau permasalahan hukum.
 </p>
+
+
+</div>
+
+
+
+
+
+<div class="step-card">
+
+
+<span>
+02
+</span>
+
+
+<h3>
+AI Analysis
+</h3>
+
+
+<p>
+Sistem memproses informasi berdasarkan konsep hukum.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="step-card">
+
+
+<span>
+03
+</span>
+
+
+<h3>
+Legal Insight
+</h3>
+
+
+<p>
+Dapatkan informasi awal yang terstruktur untuk pembelajaran.
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="disclaimer">
+
+
+<p>
+
+Disclaimer: LexAI merupakan alat bantu akademik untuk pembelajaran dan penelitian hukum. Informasi yang diberikan bukan pengganti konsultasi atau pendapat hukum profesional.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="about container">
+
+
+<h1>
+Tentang LexAI
+</h1>
+
+
+<p>
+
+LexAI adalah asisten riset hukum berbasis Artificial Intelligence yang dirancang untuk membantu mahasiswa Ilmu Hukum dalam memahami materi, melakukan analisis kasus, mencari istilah hukum, dan mendukung kegiatan akademik.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<footer class="footer">
+
+
+<div class="footer-content">
+
+
+<div>
+
+<h2>
+LexAI
+</h2>
+
+<p>
+Intelligent Legal Research Assistant berbasis Artificial Intelligence untuk mendukung pembelajaran dan riset hukum mahasiswa.
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+Technology
+</h3>
+
+<p>
+Artificial Intelligence
+<br>
+Web Development
+<br>
+Legal Research
+<br>
+Digital Knowledge Base
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+Project
+</h3>
+
+<p>
+Mahasiswa Ilmu Hukum Kelas A
+<br>
+2026
+<br>
+Academic Project
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+© 2026 LexAI | Intelligent Legal Research Assistant
+
+</div>
+
 
 </footer>
 
 
+
+
+
 <script src="script.js"></script>
+
 
 </body>
 
