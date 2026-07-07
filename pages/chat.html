@@ -4,11 +4,14 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>LexAI AI Chat</title>
+<title>LexAI | AI Legal Assistant</title>
 
 <link rel="stylesheet" href="../style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -16,66 +19,229 @@
 <body>
 
 
+<button id="topBtn">
+↑
+</button>
+
+
+
+
 <nav class="navbar">
 
+
 <div class="logo">
-⚖️ LexAI
+LexAI
 </div>
 
-<a href="../index.html">
-Home
-</a>
+
+
+<div class="menu-toggle" id="menuToggle">
+☰
+</div>
+
+
+
+<ul id="navMenu">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="chat.html">AI Chat</a></li>
+
+<li><a href="kamus.html">Kamus</a></li>
+
+<li><a href="materi.html">Materi</a></li>
+
+<li><a href="analisis.html">Analisis</a></li>
+
+<li><a href="referensi.html">Referensi</a></li>
+
+<li><a href="tentang.html">Tentang</a></li>
+
+<li><a href="kontak.html">Kontak</a></li>
+
+</ul>
+
+
+
+<button id="darkMode">
+Mode
+</button>
+
 
 </nav>
 
 
 
-<section class="chat-section">
+
+
+
+
+<section class="ai-workspace container">
+
+
+<div class="workspace-header">
 
 
 <h1>
-🤖 AI Legal Assistant
+AI Legal Assistant
 </h1>
 
 
 <p>
-Tanyakan konsep atau permasalahan hukum.
+Asisten riset hukum berbasis Artificial Intelligence untuk membantu memahami konsep dan permasalahan hukum.
 </p>
 
 
 
-<div class="chat-box">
+<div class="ai-status">
 
+<span></span>
 
-<div id="chat">
+LexAI Online
 
-<p class="bot">
-LexAI: Halo, saya siap membantu menjelaskan materi hukum.
-</p>
+</div>
+
 
 </div>
 
 
 
-<input 
-type="text"
-id="pertanyaan"
-placeholder="Contoh: Apa itu wanprestasi?">
 
 
-<button onclick="kirimPesan()">
-Kirim
+
+<div class="quick-question">
+
+
+<p>
+Contoh pertanyaan:
+</p>
+
+
+<button onclick="setQuestion('Apa itu wanprestasi?')">
+Apa itu wanprestasi?
+</button>
+
+
+<button onclick="setQuestion('Jelaskan asas praduga tidak bersalah')">
+Asas praduga tidak bersalah
+</button>
+
+
+<button onclick="setQuestion('Apa unsur tindak pidana?')">
+Unsur tindak pidana
 </button>
 
 
 </div>
 
 
+
+
+
+
+
+<div class="chat-box">
+
+
+
+<div id="chatArea">
+
+
+<div class="bot">
+
+Halo, saya LexAI. Silakan ajukan pertanyaan hukum Anda.
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="ai-search-box">
+
+
+<input
+
+type="text"
+
+id="userInput"
+
+placeholder="Tanyakan permasalahan hukum..."
+
+>
+
+
+<button onclick="sendMessage()">
+
+Kirim
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+
 </section>
 
 
 
+
+
+
+
+<section class="disclaimer">
+
+
+<p>
+
+LexAI memberikan informasi awal untuk tujuan akademik dan pembelajaran. Hasil AI bukan pengganti konsultasi hukum profesional.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 LexAI | AI Legal Assistant
+</p>
+
+</footer>
+
+
+
+
+
 <script src="../script.js"></script>
+
+
+<script>
+
+
+function setQuestion(text){
+
+document.getElementById("userInput").value=text;
+
+}
+
+
+</script>
+
 
 
 </body>
