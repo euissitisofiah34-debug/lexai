@@ -4,11 +4,14 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Generator Referensi - LexAI</title>
+<title>LexAI | Citation Generator</title>
 
 <link rel="stylesheet" href="../style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -16,83 +19,283 @@
 <body>
 
 
+<button id="topBtn">
+↑
+</button>
+
+
+
+
 <nav class="navbar">
 
+
 <div class="logo">
-⚖️ LexAI
+LexAI
 </div>
 
-<a href="../index.html">
-Home
-</a>
+
+
+<div class="menu-toggle" id="menuToggle">
+☰
+</div>
+
+
+
+<ul id="navMenu">
+
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="chat.html">AI Chat</a></li>
+
+<li><a href="kamus.html">Kamus</a></li>
+
+<li><a href="materi.html">Materi</a></li>
+
+<li><a href="analisis.html">Analisis</a></li>
+
+<li><a href="referensi.html">Referensi</a></li>
+
+<li><a href="tentang.html">Tentang</a></li>
+
+<li><a href="kontak.html">Kontak</a></li>
+
+
+</ul>
+
+
+
+<button id="darkMode">
+Mode
+</button>
+
 
 </nav>
 
 
 
-<section class="chat-section">
+
+
+
+
+
+<section class="knowledge container">
+
+
+<div class="workspace-header">
 
 
 <h1>
-📄 Generator Referensi
+Academic Citation Generator
 </h1>
 
 
 <p>
-Buat format referensi akademik secara otomatis.
+
+Buat format referensi akademik secara cepat untuk kebutuhan penelitian hukum.
+
 </p>
 
 
+</div>
 
-<div class="chat-box">
 
+
+
+
+
+
+<div class="citation-layout">
+
+
+
+
+
+<div class="citation-form">
+
+
+<h3>
+Data Sumber
+</h3>
+
+
+
+<div class="ai-search-box">
 
 <input 
 type="text"
-id="penulis"
-placeholder="Nama Penulis">
+id="author"
+placeholder="Nama Penulis"
+>
+
+</div>
 
 
-<br><br>
-
-
-<input 
-type="text"
-id="judul"
-placeholder="Judul Buku/Jurnal">
-
-
-<br><br>
-
+<div class="ai-search-box">
 
 <input 
 type="text"
-id="tahun"
-placeholder="Tahun Terbit">
+id="title"
+placeholder="Judul Buku/Jurnal"
+>
+
+</div>
 
 
-<br><br>
+<div class="ai-search-box">
+
+<input 
+type="text"
+id="year"
+placeholder="Tahun Terbit"
+>
+
+</div>
 
 
-<button onclick="buatReferensi()">
+<div class="ai-search-box">
+
+<input 
+type="text"
+id="publisher"
+placeholder="Penerbit / Sumber"
+>
+
+</div>
+
+
+
+
+
+<div class="ai-search-box">
+
+<select id="typeReference">
+
+<option>
+Buku
+</option>
+
+<option>
+Jurnal
+</option>
+
+<option>
+Website
+</option>
+
+</select>
+
+</div>
+
+
+
+
+<button 
+class="btn"
+onclick="generateReference()">
+
 Generate
+
 </button>
 
 
 
-<div id="hasilReferensi">
+</div>
+
+
+
+
+
+
+
+
+
+<div class="citation-preview">
+
+
+<h3>
+Preview Referensi
+</h3>
+
+
+
+<div class="reference-result" id="referenceResult">
+
+Referensi akan muncul di sini.
 
 </div>
 
 
+
+
+<button 
+class="copy-btn"
+onclick="copyReference()">
+
+Copy
+
+</button>
+
+
+
 </div>
+
+
+
+
+
+</div>
+
 
 
 </section>
 
 
 
+
+
+
+
+<footer>
+
+<p>
+
+© 2026 LexAI | Academic Citation Generator
+
+</p>
+
+</footer>
+
+
+
+
+
+
+
 <script src="../script.js"></script>
+
+
+
+<script>
+
+
+function copyReference(){
+
+
+let text=document.getElementById("referenceResult").innerText;
+
+
+navigator.clipboard.writeText(text);
+
+
+alert("Referensi berhasil disalin");
+
+
+}
+
+
+</script>
+
 
 
 </body>
